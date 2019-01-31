@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h1> Music App </h1>
+
+      <% if logged_in? %>
+        <%= logout %>
+      <% else %>
+        <a href="<%= new_user_url %>" class="nav-bar-link">Sign Up</a>
+        <a href="<%= new_session_url %>" class="nav-bar-link">Sign In</a>
+      <% end %>
+      
+      <%= yield %>
+    </div>
+
   </body>
 </html>
