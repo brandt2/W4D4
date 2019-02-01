@@ -12,6 +12,11 @@
   <body>
     <div class="container">
       <h1> Music App </h1>
+      <a href="<%= new_band_url %>" class="nav-bar-link">Add a Band</a>
+
+      <a href=" <%= bands_url %>" class="nav-bar-link">Bands</a>
+      <br>
+      <br>
 
       <% if logged_in? %>
         <%= logout %>
@@ -20,8 +25,8 @@
         <a href="<%= new_session_url %>" class="nav-bar-link">Sign In</a>
       <% end %>
       
-      <%= yield %>
     </div>
+    <%= yield %>
 
   </body>
 </html>

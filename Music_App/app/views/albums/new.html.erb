@@ -1,0 +1,21 @@
+<h2> New Album </h2>
+
+<form action=" <%= albums_url %>" method="POST">
+  <%= auth_token %>
+
+  <label for="name">Title:
+    <input type="text" name="album[title]">
+  </label>
+  <br>
+  
+  <label for="year">Date: 
+    <input type="date" name="album[year]">
+  </label>
+  <br>
+
+  <input type="radio" name="genre" value="live">Live
+  <input type="radio" name="genre" value="studio">Studio
+  <br>
+
+  <input type="submit" value="Add Album" class="btn btn-primary">
+</form>
